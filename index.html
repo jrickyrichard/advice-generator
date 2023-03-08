@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Advice generator app</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+    content: [
+        "./public/index.html",
+        "./src/**/*.{html,js}"
+    ],
+    theme: {
+      extend: {
+        colors: {
+          "grayish-blue": "hsl(217, 19%, 38%)",
+          "dark-grayish-blue": "hsl(217, 19%, 24%)",
+          "dark-blue": "hsl(218, 23%, 16%)",
+          "neon": "hsl(150, 100%, 66%)"
+        },
+        fontFamily: {
+          Manrope: ['Manrope', 'sans-serif']
+        },
+        textColor: {
+          "light-cyan": "hsl(193, 38%, 86%)",
+          "neon": "hsl(150, 100%, 66%)"
+        },
+      },
+    },
+    plugins: [],
+  }
+  </script>
+
+</head>
+<body class="h-screen bg-dark-blue flex w-full">
+
+  <main class="rounded-2xl p-10 text-xs text-center relative m-auto max-w-[350px] bg-dark-grayish-blue" id="advice-generator">
+    
+    <section id="advice">
+      <h1 class="text-neon uppercase tracking-[0.29em] font-bold">advice <span id="advice-id">1</span></h1>
+      <p class="text-2xl mt-[20px] text-light-cyan">&QUOT;<span id="advice-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt earum consequatur dolore doloribus, nemo eaque ea quo itaque</span>&QUOT;</p>
+    </section>
+    <section class="mt-[20px] mb-[20px] w-full" id="divider">
+      <img class="w-full" src="../images/pattern-divider-mobile.svg" alt="">
+    </section>
+    <section class="hover:cursor-pointer hover:bg-white absolute bg-bottom left-[145px] bg-neon h-16 w-16 rounded-full flex items-center justify-center" id="dice-pattern">
+      <img class="w-6 h-6 " src="../images/icon-dice.svg" alt="">
+    </section>
+  </main>
+
+<script src="script.js"></script>
+</body>
+</html>
